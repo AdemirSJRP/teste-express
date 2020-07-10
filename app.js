@@ -11,6 +11,10 @@ app.get("/", function (req, res) {
   res.send(`Hello World! on PORT ${port}`);
 });
 
+app.get("/porta/:nome", function (req, res) {
+  res.send(`Olá, ${req.params.nome}, estou trabalhando na porta ${port}`);
+});
+
 app.listen(port, function () {
   console.log(`Example app listening on port ${port}!`);
 });
